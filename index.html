@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-card">
+      <p class="eyebrow">Personal workspace</p>
+      <h1>Notes that feel a little more alive.</h1>
+      <p class="subtitle">Capture quick thoughts, tiny plans, and those suspiciously brilliant ideas that arrive five minutes before sleep.</p>
+
+      <div class="note-form">
+        <input type="text" id="noteInput" placeholder="Write a note..." autocomplete="off">
+        <button class="primary-button" onclick="addNote()">Add Note</button>
+      </div>
+    </section>
+
+    <section class="notes-panel" aria-labelledby="notes-title">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Your stack</p>
+          <h2 id="notes-title">Latest Notes</h2>
+        </div>
+        <span class="status-pill" id="notesCount">0 notes</span>
+      </div>
+
+      <ul id="notesList" class="notes-list"></ul>
+      <p id="emptyState" class="empty-state">No notes yet. Add one above and we will start the pile.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
